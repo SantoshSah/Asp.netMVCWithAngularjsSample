@@ -1,0 +1,66 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"> <span class="mdi-communication-contacts"></span>Department</h3>
+</div>
+<form id="smart-form-register1" name="departmentForm1" angular-validator-submit="ok(department.action)" novalidate angular-validator>
+
+    <div class="modal-body smart-form">
+
+        <div class="" ng-show="title">
+            <section class="">
+                <div class="alert alert-warning">
+                    {{title}}
+                </div>
+            </section>
+        </div>
+
+        <div class="" ng-show="showDangerAlert">
+            <section class="">
+                <div class="alert alert-danger" id="danger-alert">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong> <label ng-model="message2">{{message2}}</label></strong>
+                </div>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="col col-md-12">
+                <label class="input">
+                    <input type="text" id="name" name="name" placeholder="Name"
+                           ng-model="department.name"
+                           required-message="'name is required'"
+                           ng-disabled="isDeleteForm"
+                           required>
+                </label>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="col col-md-12">
+                <label class="input">
+                    <input type="text" id="description" name="description" placeholder="description"
+                           ng-model="department.description"
+                           required-message="'description is required'"
+                           ng-disabled="isDeleteForm"
+                           required>
+                </label>
+            </section>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Cancel</button>
+        <button type="submit" class="btn btn-primary">{{department.action=='Edit'?'Update':department.action}} </button>
+
+        <!--<button type="submit" class="btn btn-primary" ng-click="ok(task.action)" ng-disabled="contactForm.$invalid">Submit {{task.action}} </button>-->
+    </div>
+</form>
+<script>
+    $(document).ready(function () {
+        pageSetUp();
+        drawBreadCrumb();
+
+        //$('#starttime1').clockpicker();
+        //$('#endtime1').clockpicker();
+    });
+</script>

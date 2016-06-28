@@ -1,0 +1,104 @@
+﻿    <!-- Left panel : Navigation area -->
+<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+<aside id="left-panel">
+
+    <!-- User info -->
+    @{ Html.RenderPartial("_CurrentUser"); }
+    <!-- end user info -->
+    <!-- NAVIGATION : This navigation is also responsive
+
+    To make this navigation dynamic please make sure to link the node
+    (the reference to the nav > ul) after page load. Or the navigation
+    will not initialize.
+    -->
+    <nav>
+        <!-- NOTE: Notice the gaps after each icon usage <i></i>..
+        Please note that these links work a bit different than
+        traditional href="" links. See documentation for details.
+        -->
+
+        <ul>           
+            @*<li class="" ng-hide="Global.isAuthenticated" ng-class="menuClass('/Account/Login')">           
+                    <a href='#/Account/Login'><i class="fa fa-lg fa-fw fa-inbox"></i>Login</a> 
+            </li>
+            <li class="" ng-hide="Global.isAuthenticated" ng-class="menuClass('/Account/Register')">
+                <a href='#/Account/Register'><i class="fa fa-lg fa-fw fa-inbox"></i>Account Register</a>               
+            </li>
+            <li  ng-show="Global.isAuthenticated" ng-class="menuClass('/Account/EditProfile')">
+                <a href='#/Account/EditProfile'><i class="fa fa-lg fa-fw fa-inbox"></i>Edit Profile</a>
+            </li>
+            <li  ng-show="Global.isAuthenticated" ng-class="menuClass('/Task/Index')">
+                <a href='#/Task/Index'><i class="fa fa-lg fa-fw fa-inbox"></i>Task</a>
+            </li>
+           
+            <li ng-show="Global.isAuthenticated" ng-class="menuClass('/Log/Index')">
+                <a id="menuLogEntry" href="#/Log/Index"><i class="fa fa-lg fa-fw fa-inbox"></i><span>Logs Entry</span></a>
+            </li>                    
+
+            <li class="" ng-show="Global.isRoleAdmin && Global.isAuthenticated">
+                <a id="menuWelcome" href=""><span>Admin</span></a>
+            </li>
+            <li class="" ng-show="Global.isRoleAdmin && Global.isAuthenticated" ng-class="menuClass('/Admin/UserTask')">
+                <a href='#/Admin/UserTask'><i class="fa fa-lg fa-fw fa-inbox"></i>User Task</a>
+            </li>           
+
+            <li class="" ng-show="Global.isRoleAdmin && Global.isAuthenticated" ng-class="menuClass('/Project/Index')">
+                <a id="menuProjectEntry" href="#/Project/Index"><i class="fa fa-lg fa-fw fa-inbox"></i><span>Projects Entry</span></a>
+            </li>
+            <li class="" ng-show="Global.isRoleAdmin && Global.isAuthenticated" ng-class="menuClass('/User/Index')">
+                <a id="menuUser" href="#/User/Index"><i class="fa fa-lg fa-fw fa-inbox"></i><span>Manage Users</span></a>
+            </li>
+
+            <li class="" ng-show="Global.isRoleAdmin && Global.isAuthenticated" ng-class="menuClass('/AdminLog/Index')">
+                <a id="menuLogEntry" href="#/AdminLog/Index"><i class="fa fa-lg fa-fw fa-inbox"></i><span>Manage Logs </span></a>
+            </li>*@
+
+             <li class="" ng-if="!Global.isAuthenticated" ng-class="menuClass('/Account/Login')" ng-cloak>           
+                    <a href='#/Account/Login'><i class="fa fa-lg fa-fw fa-inbox"></i>Login</a> 
+            </li>
+            <li class="" ng-if="!Global.isAuthenticated" ng-class="menuClass('/Account/Register')" ng-cloak>
+                <a href='#/Account/Register'><i class="fa fa-lg fa-fw fa-inbox"></i>Account Register</a>               
+            </li>
+            <li  ng-if="Global.isAuthenticated" ng-class="menuClass('/Account/EditProfile')" ng-cloak>
+                <a href='#/Account/EditProfile'><i class="fa fa-lg fa-fw fa-inbox"></i>Edit Profile</a>
+            </li>
+            <li  ng-if="Global.isAuthenticated" ng-class="menuClass('/Employee/Index')" ng-cloak>
+                <a href='#/Employee/Index'><i class="fa fa-lg fa-fw fa-inbox"></i>Employee</a>
+            </li>
+            <li ng-if="Global.isAuthenticated" ng-class="menuClass('/Department/Index')" ng-cloak>
+                <a href='#/Department/Index'><i class="fa fa-lg fa-fw fa-inbox"></i>Department</a>
+            </li>
+                             
+
+            <li class="" ng-if="Global.isRoleAdmin && Global.isAuthenticated" ng-cloak>
+                <a id="menuWelcome" href=""><span>Admin</span></a>
+            </li>
+            @*<li class="" ng-if="Global.isRoleAdmin && Global.isAuthenticated" ng-class="menuClass('/Admin/UserTask')" ng-cloak>
+                <a href='#/Admin/UserTask'><i class="fa fa-lg fa-fw fa-inbox"></i>User Task</a>
+            </li>*@           
+
+            @*<li class="" ng-if="Global.isRoleAdmin && Global.isAuthenticated" ng-class="menuClass('/Project/Index')" ng-cloak>
+                <a id="menuProjectEntry" href="#/Project/Index"><i class="fa fa-lg fa-fw fa-inbox"></i><span>Projects Entry</span></a>
+            </li>*@
+            <li class="" ng-if="Global.isRoleAdmin && Global.isAuthenticated" ng-class="menuClass('/User/Index')" ng-cloak>
+                <a id="menuUser" href="#/User/Index"><i class="fa fa-lg fa-fw fa-inbox"></i><span>Manage Users</span></a>
+            </li>
+
+            @*<li class="" ng-if="Global.isRoleAdmin && Global.isAuthenticated" ng-class="menuClass('/AdminLog/Index')" ng-cloak>
+                <a id="menuLogEntry" href="#/AdminLog/Index"><i class="fa fa-lg fa-fw fa-inbox"></i><span>Manage Logs </span></a>
+            </li>*@
+        </ul>
+    </nav>
+    <span class="minifyme" data-action="minifyMenu">
+        <i class="fa fa-arrow-circle-left hit"></i>
+    </span>
+
+</aside>
+<!-- END NAVIGATION -->
+<style>
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+    
+</style>

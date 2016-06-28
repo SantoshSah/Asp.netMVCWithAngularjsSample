@@ -1,0 +1,150 @@
+﻿<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script> if (!window.jQuery) { document.write('<script src="/scripts/libs/jquery-2.1.1.min.js"><\/script>'); } </script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script> if (!window.jQuery.ui) { document.write('<script src="/scripts/libs/jquery-ui-1.10.3.min.js"><\/script>'); } </script>
+
+<!-- IMPORTANT: SmartAdmin Core -->
+@*@Scripts.Render("~/scripts/smartadmin")*@
+
+<script src="~/Scripts/app.config.js"></script>
+<script src="~/Scripts/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+<script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+<script src="~/Scripts/notification/SmartNotification.min.js"></script>
+<script src="~/Scripts/smartwidgets/jarvis.widget.min.js"></script>
+<script src="~/Scripts/plugin/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/Scripts/plugin/masked-input/jquery.maskedinput.min.js"></script>
+<script src="~/Scripts/plugin/select2/select2.min.js"></script>
+<script src="~/Scripts/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>/ 
+<script src="~/Scripts/plugin/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+@*<script src="~/Scripts/plugin/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+<script src="~/Scripts/plugin/clockpicker/clockpicker.min.js"></script>*@
+
+<script src="~/Scripts/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+<script src="~/Scripts/plugin/fastclick/fastclick.min.js"></script>
+<script src="~/Scripts/app.min.js"></script>
+
+
+@*@if (Request.IsAuthenticated)
+{*@
+    <!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+   @*<script data-pace-options='{ "restartOnRequestAfter": true }' src="~/scripts/plugin/pace/pace.min.js"></script>*@
+    <!-- Demo purpose only! -->
+    @*<script src="/scripts/demo.min.js"></script>*@
+@*}*@
+
+<!-- Voice command : plugin -->
+<script src="~/scripts/speech/voicecommand.min.js"></script>
+
+<!-- SmartChat UI : plugin -->
+@*@Scripts.Render("~/scripts/smart-chat")*@
+<script src="~/Scripts/smart-chat-ui/smart.chat.ui.min.js"></script>
+<script src="~/Scripts/smart-chat-ui/smart.chat.manager.min.js"></script>
+
+<!-- DataTables : plugin -->
+@*@Scripts.Render("~/scripts/datatables")*@
+
+<script src="~/scripts/plugin/datatables/jquery.datatables.min.js"></script>
+<script src="~/scripts/plugin/datatables/datatables.colvis.min.js"></script>
+<script src="~/scripts/plugin/datatables/datatables.tabletools.min.js"></script>
+<script src="~/scripts/plugin/datatables/datatables.bootstrap.min.js"></script>
+<script src="~/scripts/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+
+
+<!-- jQGrid : plugin -->
+@*@Scripts.Render("~/scripts/jq-grid")*@
+<script src="~/Scripts/plugin/jqgrid/jquery.jqGrid.min.js"></script>
+<script src="~/Scripts/plugin/jqgrid/grid.locale-en.min.js"></script>
+
+
+<!-- Forms : plugin -->
+@*@Scripts.Render("~/scripts/forms")*@
+<script src="~/Scripts/plugin/jquery-form/jquery-form.min.js"></script>
+   
+
+<!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip, Morris, Sparkline, EasyPie -->
+@*@Scripts.Render("~/scripts/charts")*@
+<script src="~/Scripts/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+<script src="~/Scripts/plugin/sparkline/jquery.sparkline.min.js"></script>
+<script src="~/Scripts/plugin/morris/morris.min.js"></script>
+<script src="~/Scripts/plugin/morris/raphael.min.js"></script>
+<script src="~/Scripts/plugin/flot/jquery.flot.cust.min.js"></script>
+<script src="~/Scripts/plugin/flot/jquery.flot.resize.min.js"></script>
+<script src="~/Scripts/plugin/flot/jquery.flot.time.min.js"></script>
+<script src="~/Scripts/plugin/flot/jquery.flot.fillbetween.min.js"></script>
+<script src="~/Scripts/plugin/flot/jquery.flot.orderBar.min.js"></script>
+<script src="~/Scripts/plugin/flot/jquery.flot.pie.min.js"></script>
+<script src="~/Scripts/plugin/flot/jquery.flot.tooltip.min.js"></script>
+<script src="~/Scripts/plugin/dygraphs/dygraph-combined.min.js"></script>
+<script src="~/Scripts/plugin/chartjs/chart.min.js"></script>
+
+<!-- Vector Maps Plugin: Vectormap engine, Vectormap language -->
+@*@Scripts.Render("~/scripts/vector-map")*@
+<script src="~/Scripts/plugin/vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="~/Scripts/plugin/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+  
+<!-- Full Calendar -->
+@*@Scripts.Render("~/scripts/full-calendar")*@
+<script src="~/Scripts/plugin/moment/moment.min.js"></script>
+<script src="~/Scripts/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>
+
+<!--Angularjs library-->
+@*@Scripts.Render("~/scripts/angularJS")*@
+
+
+<script src="~/Assets/Scripts/angular/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.4/ui-bootstrap-tpls.js"></script>
+
+<script src="~/Assets/Scripts/angular/angular-route.js"></script>
+<script src="~/Assets/Scripts/angular/angular-resource.js"></script>
+<script src="~/Assets/Scripts/angular/angular-animate.js"></script>
+<script src="~/Assets/Scripts/angular/angular-loader.js"></script>
+<script src="~/Assets/Scripts/angular/angular-aria.js"></script>
+<script src="~/Assets/Scripts/angular/angular-cookies.js"></script>
+<script src="~/Assets/Scripts/angular/angular-messages.js"></script>
+<script src="~/Assets/Scripts/angular/angular-mocks.js"></script>
+<script src="~/Assets/Scripts/angular/angular-sanitize.js"></script>
+<script src="~/Assets/Scripts/angular/angular-validator.js"></script>
+<script src="~/Assets/Scripts/angular/angular-touch.js"></script>
+<script src="~/Assets/Scripts/angular/i18n/angular-locale_en-us.js"></script>
+<script src="~/Assets/Scripts/checklist-model.min.js"></script>
+<script src="~/Scripts/datetime-picker.js"></script>
+<script src="~/App/app.js"></script>
+
+
+
+
+<!--Angular app js-->
+<script src="~/App/Services/Interceptors/errorHandler.js"></script>
+<script src="~/App/Services/Interceptors/xmlHttpInterceptor.js"></script>
+<script src="~/App/Services/Account/storageHandler.js"></script>
+<script src="~/App/Services/Account/tokenHandler.js"></script>
+<script src="~/App/Services/Account/authService.js"></script>
+@*<script src="~/App/Services/Task/taskService.js"></script>*@
+@*<script src="~/App/Services/Contact/contactService.js"></script>*@
+<script src="~/App/Services/Department/departmentService.js"></script>
+<script src="~/App/Services/Employee/employeeService.js"></script>
+
+@*<script src="~/App/Services/Log/logService.js"></script>
+<script src="~/App/Services/Project/projectService.js"></script>*@
+<script src="~/App/Services/User/userService.js"></script>
+@*<script src="~/App/Services/AdminLog/adminLogService.js"></script>*@
+<script src="~/App/Route/routeConfig.js"></script>
+
+<script src="~/App/Controllers/Global/globalController.js"></script>
+<script src="~/App/Controllers/Account/loginController.js"></script>
+<script src="~/App/Controllers/Account/registerController.js"></script>
+<script src="~/App/Controllers/Account/editController.js"></script>
+<script src="~/App/Controllers/Account/emailConfirmController.js"></script>
+<script src="~/App/Controllers/Account/resetPasswordController.js"></script>
+
+<script src="~/App/Controllers/Department/departmentController.js"></script>
+<script src="~/App/Controllers/Department/departmentFormModalController.js"></script>
+
+<script src="~/App/Controllers/Employee/employeeController.js"></script>
+<script src="~/App/Controllers/Employee/employeeFormModalController.js"></script>
+
+<script src="~/App/Controllers/User/userController.js"></script>
+<script src="~/App/Controllers/User/userFormModalController.js"></script>
+
+

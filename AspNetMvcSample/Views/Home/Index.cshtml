@@ -1,0 +1,16 @@
+﻿
+﻿<!-- MAIN CONTENT -->
+﻿<div id="content">
+    <div class="router-animation-loader" style="position: relative;top: 0px;left: 21px;" ng-show="isViewLoading">
+        @*<i class="fa fa-gear fa-4x fa-spin"></i>*@
+        <i class="fa fa-2x fa-cog fa-spin"></i>
+    </div>
+    @*<div class="alert alert-info" ng-show="isViewLoading">
+            <strong>Info!</strong> Indicates a neutral informative change or action.
+        </div>*@
+    <div class="row">
+        <ng-view>
+        </ng-view>
+    </div>
+</div>
+<!-- END MAIN CONTENT -->

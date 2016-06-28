@@ -1,0 +1,341 @@
+﻿<div id="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+            <h1 class="page-title txt-color-blueDark">
+                <i class="fa fa-list-alt fa-fw "></i>
+                Widgets
+                <span>
+                    >
+                    Smart Widgets
+                </span>
+            </h1>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+            <ul id="sparks" class="">
+                <li class="sparks-info">
+                    <h5> My Income <span class="txt-color-blue">$47,171</span></h5>
+                    <div class="sparkline txt-color-blue hidden-mobile hidden-md hidden-sm">
+                        1300, 1877, 2500, 2577, 2000, 2100, 3000, 2700, 3631, 2471, 2700, 3631, 2471
+                    </div>
+                </li>
+                <li class="sparks-info">
+                    <h5> Site Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up" data-rel="bootstrap-tooltip" title="Increased"></i>&nbsp;45%</span></h5>
+                    <div class="sparkline txt-color-purple hidden-mobile hidden-md hidden-sm">
+                        110,150,300,130,400,240,220,310,220,300, 270, 210
+                    </div>
+                </li>
+                <li class="sparks-info">
+                    <h5> Site Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
+                    <div class="sparkline txt-color-greenDark hidden-mobile hidden-md hidden-sm">
+                        110,150,300,130,400,240,220,310,220,300, 270, 210
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- widget grid -->
+    <section id="widget-grid" class="">
+
+        <!-- row -->
+        <div class="row">
+
+            <!-- NEW WIDGET START -->
+            <!--<article class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+            </article>-->
+            <!-- WIDGET END -->
+            <!-- NEW WIDGET START -->
+            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <!--<div class="alert alert-info">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
+                            <h3 class="no-margin">Please fill the task within time, 9:30 am to 10:00 am</h3>                            
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">                        
+                        </div>
+                    </div>
+                </div>-->
+                <!-- Widget ID (each widget will need unique ID)-->
+                <div class="jarviswidget jarviswidget-color-greenDark" id="wid-id-18" data-widget-colorbutton="false" data-widget-editbutton="false">
+                    <!-- widget options:
+                        usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+                        data-widget-colorbutton="false"
+                        data-widget-editbutton="false"
+                        data-widget-togglebutton="false"
+                        data-widget-deletebutton="false"
+                        data-widget-fullscreenbutton="false"
+                        data-widget-custombutton="false"
+                        data-widget-collapsed="true"
+                        data-widget-sortable="false"
+
+                    -->
+                    <header>
+                        <h2><strong>Employee</strong></h2>
+
+                    </header>
+
+                    <!-- widget div-->
+                    <div>
+
+                        <!-- widget edit box -->
+                        <div class="jarviswidget-editbox">
+                            <!-- This area used as dropdown edit box -->
+                            <input class="form-control" type="text">
+                            <span class="note"><i class="fa fa-check text-success"></i> Change title to update and save instantly!</span>
+
+                        </div>
+                        <!-- end widget edit box -->
+                        <!-- widget content -->
+                        <div class="widget-body no-padding">
+                            <div class="widget-body-toolbar" ng-show="showSuccessAlert">
+                                <div class="row">
+                                    <div class=" col-md-12">
+                                        <div class="input group">
+                                            <div class="alert alert-success" id="success-alert">
+                                                <button type="button" class="close" data-dismiss="alert">x</button>
+                                                <strong> <label ng-model="message">{{message}}</label></strong>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                   
+                                </div>
+                            </div>
+
+                            <div class="widget-body-toolbar" ng-show="showErrorAlert">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input group">
+                                            <div class="alert alert-danger" id="error-alert">
+                                                <button type="button" class="close" data-dismiss="alert">x</button>
+                                                <strong> <label ng-model="message1">{{message1}}</label></strong>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--added form of add task-->
+                            
+                            <form id="smart-form-register" name="employeeForm" angular-validator-submit="saveEmployee()" class="smart-form" novalidate  angular-validator >
+                                <header>
+                                    Employee Detail
+                                </header>
+
+                                <fieldset style="position: relative;">
+                                    <div class="row">
+                                        <section class="col col-md-12">
+                                            <label class="input">
+                                                <input type="text" id="firstName" name="firstName" placeholder="First Name"
+                                                       ng-model="firstName"
+                                                       required-message="'first name is required'"
+                                                       required>
+                                            </label>
+                                            <!--<label class="textarea">
+                                                <textarea rows="3" name="taskName" placeholder="Please enter the task of the project" ng-model="taskName" required-message="'task is required'" required></textarea>
+                                            </label>-->                                          
+                                        </section>
+                                    </div>
+                                    <div class="row">
+                                        <section class="col col-6">
+                                            <label class="input">
+                                                <input type="text" id="lastName" name="lastName" placeholder="Last Name"
+                                                       ng-model="lastName"
+                                                       required-message="'last name is required'"
+                                                       required>
+                                            </label>
+                                          
+                                        </section>
+                                        <section class="col col-6">
+
+                                            <label class="input">
+                                                <input type="email" id="email" name="email" placeholder="Email"
+                                                       ng-model="email"
+                                                       required-message="'email is required'"
+                                                       invalid-message="'Thats not a real email address'"
+                                                       validate-on="dirty"
+                                                       required>
+                                            </label>
+                                            <!--<label class="input">
+                                                <i class="icon-append fa fa-calendar"></i>                                              
+                                                <input type="text" name="date" placeholder="Please select the date" 
+                                                 ng-model="date"
+                                                 class="datepicker"
+                                                 data-dateformat='mm/dd/yy'
+                                                 validator = "dateValidator(date) === true"
+                                                 invalid-message = "dateValidator(date)" 
+                                                 required-message="'date is required'"
+                                                 validate-on="dirty"
+                                                 required>
+                                            </label>-->
+                                        </section>
+                                    </div>
+                                 
+                                    <div class="row">
+
+                                   <section class="col col-6"  >
+                                       <label class="input">
+                                           <input type="text" id="address" name="address" placeholder="address"
+                                                  ng-model="address"
+                                                  required-message="'address is required'"
+                                                  required>
+                                       </label>                                        
+                                          
+                                    </section>
+                                                                       
+                                   <section class="col col-6" >
+                                       <label class="select">
+                                         <select name="departmentId"  ng-options="dep.id as dep.name for dep in departments" ng-model="departmentId"   required-message="'please select the department'" required >
+                                            <option value="">select department</option>
+                                        </select>
+                                        <i></i>
+                                     </label>
+
+                                    </section>
+                                    </div>
+                                </fieldset>
+                                <div ng-show="employeeFormSubmitting" class="modalWhenSubmitForm"></div>
+                                <footer>
+                                    <button type="submit" class="btn btn-primary">			                      
+                                        <span data-ng-hide="loadingAdd">
+                                            Add
+                                        </span>
+                                        <span data-ng-show="loadingAdd">
+                                            Saving
+                                            <i class="fa fa-spinner fa-spin"></i>
+                                        </span>                                          
+                                    </button>
+                                </footer>
+                            </form>
+                        </div>
+                        <!-- end widget content -->
+
+                    </div>
+                    <!-- end widget div -->
+
+                </div>
+                <!-- end widget -->
+
+            </article>
+            <!-- WIDGET END -->
+
+
+        </div>
+        <!-- end row -->
+        <!--row-->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="well">
+                    <div class="row">
+
+                        <div class="col-md-3">
+                           
+                            <!--<select name="projectId" ng-options="proj.name for proj in projects" ng-model="searchTextprojectId" required-message="'please select the project'" required class="col-md-6 form-control">
+                                <option value="">All project</option>
+                            </select>-->                             
+                        <select name="departmentId"  ng-options="dep.name for dep in departments" ng-model="departmentId" class="col-md-6 form-control"   required-message="'please select the department'" required >
+                        <option value="">select department</option>
+                        </select>                                      
+                        </div>
+
+                        <div class="col-md-4">
+                            <input id="filter" type="text" class="form-control" placeholder="Name" ng-model="searchTextEmployeeName">
+                        </div>
+
+                        <div class="col-md-5">
+                         
+
+                        </div>
+                       
+                    </div>
+                    <br />
+                        <div class="alert alert-info">
+                           Employee List
+                        </div>
+
+                        <table class="table table-bordered" style="position:relative;">
+                            <thead>
+                                <tr>
+                                    <th><i class="fa fa-key text-warning"></i>Id</th>
+                                    <th>First Name <i class="text-danger">!</i></th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>Department</th>
+                                    <th></th>
+                                  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="emp in employeeList | filter :searchTextEmployeeName | filter: {departmentId :departmentId.id}">
+                                    <td>{{emp.id}}</td>
+                                    <td>{{emp.firstName}}</td>                                  
+                                    <td>{{emp.lastName}}</td>
+                                    <td>{{emp.email}}</td>
+                                    <td>{{emp.address}}</td>
+                                    <td>{{emp.departmentName}}</td>
+                                     
+                                    <td width="60px">
+                                        <a class="fa fa-edit" ng-click="Modals.open(emp,'Edit')"></a>
+                                        <a class="fa fa-trash-o " ng-click="Modals.open(emp,'Delete')"></a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                            
+
+                        </table>
+                        <div ng-show="todoTaskLoader" class="modalWhenLoading"></div>
+                    </div>
+            </div>
+        </div>
+        <!--end row-->
+        
+
+    </section>
+    <!-- end widget grid -->
+   
+</div>
+
+<script>
+    $(document).ready(function () {
+        pageSetUp();
+        drawBreadCrumb();
+    });
+</script>
+
+<!--<style>
+    .modalWhenSubmitForm {
+    display: block;
+    position: absolute;
+    /* position: fixed; */
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 )  50% 50% no-repeat;
+}
+    .modalWhenLoading {
+    /* display: block; */
+    position: absolute;
+    /* position: fixed; */
+    z-index: 1000;
+    top: 0;
+    /* transform: translateY(-50%); */
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) url('http://sampsonresume.com/labs/pIkfp.gif') 50% 50% no-repeat;
+}
+
+
+</style>-->
+

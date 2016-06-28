@@ -1,0 +1,99 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"> <span class="mdi-communication-contacts"></span>Employee</h3> 
+</div>
+<form id="smart-form-register1" name="employeeForm1" angular-validator-submit="ok(employee.action)"  novalidate angular-validator >
+  
+    <div class="modal-body smart-form">
+
+        <div class="" ng-show="title">
+            <section class="">
+                <div class="alert alert-warning">
+                    {{title}}
+                </div>
+            </section>
+        </div>
+
+        <div class="" ng-show="showDangerAlert">
+            <section class="">
+                <div class="alert alert-danger" id="danger-alert">
+                    <button type="button" class="close" data-dismiss="alert">x</button>
+                    <strong> <label ng-model="message2">{{message2}}</label></strong>
+                </div>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="col col-md-12">
+                <label class="input">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name"
+                           ng-model="employee.firstName"
+                           required-message="'first name is required'"
+                           ng-disabled="isDeleteForm"
+                           required>
+                </label>             
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="col col-6">
+                <label class="input">
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name"
+                           ng-model="employee.lastName"
+                           ng-disabled="isDeleteForm"
+                           required-message="'last name is required'"
+                           required>
+                </label>
+            </section>
+            <section class="col col-6">
+                <label class="input">
+                    <input type="email" id="email" name="email" placeholder="Email"
+                           ng-model="employee.email"
+                           ng-disabled="isDeleteForm"
+                           required-message="'email is required'"
+                           invalid-message="'Thats not a real email address'"                            
+                           validate-on="dirty"
+                           required>
+                </label>
+            </section>
+        </div>
+     
+        <div class="row">
+            <section class="col col-6">
+                <label class="input">
+                    <input type="text" id="address" name="address" placeholder="address"
+                           ng-model="employee.address"
+                           required-message="'address is required'"
+                           ng-disabled="isDeleteForm"
+                           required>
+                </label>
+            </section>
+            <section class="col col-6">
+                <label class="select">
+                    <select name="employee.departmentId" ng-options="dep.id as dep.name for dep in departments" 
+                     ng-disabled="isDeleteForm"
+                     ng-model="employee.departmentId" required-message="'please select the department'" required>
+                        <option value="">select department</option>
+                    </select>
+                    <i></i>
+                </label>
+            </section>
+        </div>
+    
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()" >Cancel</button>
+        <button type="submit" class="btn btn-primary">{{employee.action=='Edit'?'Update':employee.action}} </button>
+
+        <!--<button type="submit" class="btn btn-primary" ng-click="ok(task.action)" ng-disabled="contactForm.$invalid">Submit {{task.action}} </button>-->
+    </div>
+</form>
+<script>
+    $(document).ready(function () {
+        pageSetUp();
+        drawBreadCrumb();
+
+        //$('#starttime1').clockpicker();
+        //$('#endtime1').clockpicker();
+    });
+</script>

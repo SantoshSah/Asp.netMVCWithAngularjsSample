@@ -1,0 +1,101 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title"> <span class="mdi-communication-contacts"></span>User</h3>
+</div>
+
+    <form id="smart-form-register" name="userFomr1" angular-validator-submit="ok(user.action)"  novalidate angular-validator >
+      
+        <div class="modal-body smart-form">
+            <div class="" ng-show="title">
+                <section class="">
+                    <div class="alert alert-warning">
+                        {{title}}
+                    </div>
+                </section>
+            </div>
+
+            <fieldset>
+                <div class="row">
+                    <section class="col col-6">
+                        <label class="input">
+
+                            <input id="firstName" name="firstName" placeholder="First Name" class="form-control" ng-model="user.firstName" required-message="'firstName is required'" required ng-disabled="user.action=='Delete'">
+
+                        </label>
+                     
+                    </section>
+
+                    <section class="col col-6">
+                        <label class="input">
+                            <input id="lastName" name="lastName" placeholder="Last Name" class="form-control" ng-model="user.lastName" required-message="'lastName is required'" required ng-disabled="user.action=='Delete'">
+                        </label>
+                    </section>
+
+                </div>
+                <div class="row">
+                    <section class="col col-6">
+                        <label class="select">
+                            <input id="email" name="email" placeholder="Email" class="form-control" ng-model="user.email"  readonly>
+                        </label>
+                    </section>
+                    <section class="col col-6">
+                        <label class="input">
+                            <input type="text" name="userName" id="userName" placeholder="UserName" class="form-control" ng-model="user.userName"  readonly>
+                        </label>
+                    </section>
+                </div>
+            
+                <div class="row">
+                    <section class="col col-6">
+                        <label class="input">
+                            <input type="password" id="password" name="password" ng-model="user.password" placeholder="Password" ng-disabled="user.action=='Delete'">
+                        </label>
+                    </section>
+
+                    <section class="col col-6">
+                        <label class="input">
+                            <input type="password" id="confirmpassword" name="confirmpassword" ng-model="user.password" placeholder="Same Password" ng-disabled="user.action=='Delete'">
+                        </label>
+                    </section>
+
+                </div>
+
+                <div class="row">
+                 
+                    <section class="col col-6">
+                        <label class="select">
+                            <select ng-model="user.activated" ng-options="boolToStrInDropDownActivated(item) for item in [true, false]" required-message="'select user status'" required ng-disabled="user.action=='Delete'"></select>
+
+                        </label>
+                    </section>
+
+                </div>
+            </fieldset>
+
+            <header> Role Detail
+            <fieldset>
+
+                <div class="check-box-panel">
+                    <label ng-repeat="role in roles" style="padding:10px;">
+                        <input type="checkbox" checklist-model="user.userRoleArray" checklist-value="role.id" ng-click="toggleSelection(role.id)"  ng-disabled="user.action=='Delete'"> {{role.name}}
+                    </label>
+                </div>
+            </fieldset>
+            </header>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" ng-click="cancel()">Cancel</button>
+            <button type="submit" class="btn btn-primary">{{user.action=='Edit'?'Update':user.action}} </button>
+        </div>
+
+</form>
+
+
+<script>
+    $(document).ready(function () {
+        pageSetUp();
+        drawBreadCrumb();
+
+
+    });
+</script>
